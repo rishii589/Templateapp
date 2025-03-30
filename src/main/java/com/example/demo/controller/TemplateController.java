@@ -220,7 +220,7 @@ public class TemplateController {
      * 
      * @param templateForm テンプレートのフォームデータ
      * @param model テンプレート一覧をViewに渡すためのSpringのModelオブジェクト
-     * @return "templa/edit" - テンプレート変更画面のHTMLテンプレートのパス
+     * @return "template/edit" - テンプレート変更画面のHTMLテンプレートのパス
      */
     @GetMapping("/template/back")
     public String backToEditPage(TemplateForm templateForm,Model model) {
