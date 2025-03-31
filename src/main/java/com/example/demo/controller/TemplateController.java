@@ -20,7 +20,7 @@ import com.example.demo.service.TemplateService;
 
 /**
  * Webアプリケーションのテンプレート関連機能を担当するControllerクラスです。
- * テンプレートの一覧表示、登録、変更などの機能が含まれています。
+ * 一覧表示、登録、変更などの機能が含まれています。
  *
  */
 @Controller
