@@ -1,0 +1,10 @@
+com/example/demo/service/TemplateService.class
+com/example/demo/form/TemplateForm.class
+com/example/demo/entity/Template.class
+com/example/demo/service/TemplateServiceImpl.class
+com/example/demo/controller/TemplateController.class
+com/example/demo/repository/TemplateRepository.class
+com/example/demo/mapper/TemplateMapper.class
+com/example/demo/controller/GlobalAdviceController.class
+com/example/demo/DemoApplication.class
+com/example/demo/common/Constants.class
