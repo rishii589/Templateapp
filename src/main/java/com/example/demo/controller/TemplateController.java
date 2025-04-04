@@ -20,7 +20,11 @@ import com.example.demo.service.TemplateService;
 
 /**
  * Webアプリケーションのテンプレート関連機能を担当するControllerクラスです。
+<<<<<<< HEAD
  * 一覧表示、登録、変更などの機能が含まれています。
+=======
+ * テンプレートの一覧表示、登録、変更などの機能が含まれています。
+>>>>>>> parent of 28d5b78 (Revert "no message")
  *
  */
 @Controller
@@ -220,7 +224,11 @@ public class TemplateController {
      * 
      * @param templateForm テンプレートのフォームデータ
      * @param model テンプレート一覧をViewに渡すためのSpringのModelオブジェクト
+<<<<<<< HEAD
      * @return "templa/edit" - テンプレート変更画面のHTMLテンプレートのパス
+=======
+     * @return "template/edit" - テンプレート変更画面のHTMLテンプレートのパス
+>>>>>>> parent of 28d5b78 (Revert "no message")
      */
     @GetMapping("/template/back")
     public String backToEditPage(TemplateForm templateForm,Model model) {
