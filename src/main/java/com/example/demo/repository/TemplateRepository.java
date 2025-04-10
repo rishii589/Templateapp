@@ -34,16 +34,16 @@ public class TemplateRepository {
         return templateMapper.findAll();
     }
 
-    public List<Template> sort1() {
-        return templateMapper.sort1();
+    public List<Template> contract() {
+        return templateMapper.contract();
     }
 
-    public List<Template> sort2() {
-        return templateMapper.sort2();
+    public List<Template> afterContract() {
+        return templateMapper.afterContract();
     }
 
-    public List<Template> sort3() {
-        return templateMapper.sort3();
+    public List<Template> others() {
+        return templateMapper.others();
     }
     
     /**

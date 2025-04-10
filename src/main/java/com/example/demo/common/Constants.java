@@ -5,7 +5,7 @@ package com.example.demo.common;
  *
  */
 public class Constants {
-	
+
 	// インスタンスの生成禁止
 	private Constants (){}
 	

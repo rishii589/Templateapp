@@ -6,19 +6,19 @@
 	
 	<!-- テンプレートの全件取得 -->
 	<select id="findAll" resultType="com.example.demo.entity.Template">
-        SELECT * FROM template where deletedAt IS NULL;
+        SELECT * FROM template WHERE deleteFlg = 0;
     </select>
 
-    <select id="sort1" resultType="com.example.demo.entity.Template">
-        SELECT * FROM template where typeId = 1 AND deletedAt IS NULL;
+    <select id="contract" resultType="com.example.demo.entity.Template">
+        SELECT * FROM template WHERE typeId = 1 AND deleteFlg = 0;
     </select>
 
-    <select id="sort2" resultType="com.example.demo.entity.Template">
-        SELECT * FROM template where typeId = 2 AND deletedAt IS NULL;
+    <select id="afterContract" resultType="com.example.demo.entity.Template">
+        SELECT * FROM template WHERE typeId = 2 AND deleteFlg = 0;
     </select>
 
-    <select id="sort3" resultType="com.example.demo.entity.Template">
-        SELECT * FROM template where typeId = 3 AND deletedAt IS NULL;
+    <select id="others" resultType="com.example.demo.entity.Template">
+        SELECT * FROM template WHERE typeId = 3 AND deleteFlg = 0;
     </select>
     
     <!-- 新規テンプレートの登録 -->
@@ -31,7 +31,7 @@
     
         <!-- テンプレートIDを指定してテンプレートを取得 -->
     <select id="getTemplate" resultType="com.example.demo.entity.Template">
-        SELECT * FROM template where id = #{id} AND deletedAt IS NULL;
+        SELECT * FROM template WHERE id = #{id} AND deletedAt IS NULL;
 	</select>
 	
 	   <!-- テンプレートの削除 -->

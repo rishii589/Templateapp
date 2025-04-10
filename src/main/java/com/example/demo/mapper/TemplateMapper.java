@@ -19,11 +19,11 @@ public interface TemplateMapper {
      */
     List<Template> findAll();
 
-    List<Template> sort1();
+    List<Template> contract();
 
-    List<Template> sort2();
+    List<Template> afterContract();
 
-    List<Template> sort3();
+    List<Template> others();
     
     /**
      * テンプレートを保存します。

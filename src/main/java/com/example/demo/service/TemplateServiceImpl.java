@@ -30,22 +30,22 @@ public class TemplateServiceImpl implements TemplateService{
 	@Override
 	public List<Template> findAll() {
 		return templateRepository.findAll();
-		}
+	}
 
 	@Override
-	public List<Template> sort1() {
-		return templateRepository.sort1();
-		}
+	public List<Template> contract() {
+		return templateRepository.contract();
+	}
 
 	@Override
-	public List<Template> sort2() {
-		return templateRepository.sort2();
-		}
+	public List<Template> afterContract() {
+		return templateRepository.afterContract();
+	}
 
 	@Override
-	public List<Template> sort3() {
-		return templateRepository.sort3();
-		}
+	public List<Template> others() {
+		return templateRepository.others();
+	}
 	
 	
 	/**
@@ -142,7 +142,7 @@ public class TemplateServiceImpl implements TemplateService{
 	    template.setCreatedAt(templateForm.getCreatedAt());
 	    template.setUpdatedAt(templateForm.getUpdatedAt());
 	    return template;
-	    }
+	}
 	
 	/**
 	 * テンプレートエンティティをテンプレートフォームに変換するメソッドです。
@@ -160,6 +160,6 @@ public class TemplateServiceImpl implements TemplateService{
 	    templateForm.setCreatedAt(template.getCreatedAt());
 	    templateForm.setUpdatedAt(template.getUpdatedAt());
 	    return templateForm;
-	    }
+	}
 	
 }

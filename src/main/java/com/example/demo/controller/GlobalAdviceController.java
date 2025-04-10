@@ -17,7 +17,7 @@ public class GlobalAdviceController {
 	@ExceptionHandler(DataAccessException.class)
 	public String handleDatabaseError(DataAccessException ex, Model model) {
 	    model.addAttribute("errorMessage", "データベースアクセスエラーが発生しました。");
-	    return "task/systemError";
+	    return "template/systemError";
 	}
 	
     /**
@@ -29,7 +29,7 @@ public class GlobalAdviceController {
     @ExceptionHandler(IllegalArgumentException.class)
     public String handleIllegalArgumentException(IllegalArgumentException ex, Model model) {
         model.addAttribute("errorMessage", ex.getMessage());
-        return "task/systemError";
+        return "template/systemError";
     }
 
 }
