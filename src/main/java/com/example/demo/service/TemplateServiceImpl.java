@@ -96,10 +96,10 @@ public class TemplateServiceImpl implements TemplateService{
 	public TemplateForm getTemplate(int id) {
 		
 		//テンプレートを取得
-		Template template =templateRepository.getTemplate(id);
+		// Template template =templateRepository.getTemplate(id);
 		
 		//変換処理
-		TemplateForm templateForm =convertToTemplateForm(template);
+		TemplateForm templateForm =convertToTemplateForm(templateRepository.getTemplate(id));
 		
 		return templateForm;
 	}

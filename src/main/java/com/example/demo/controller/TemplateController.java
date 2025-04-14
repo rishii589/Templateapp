@@ -48,7 +48,12 @@ public class TemplateController {
 		return "template/index";
 	}
 
-	//種別「受注時」のみを表示するメソッド
+	/**
+	 * 種別「受注時」のみを表示するメソッド
+	 * 
+	 * @param model テンプレート一覧をViewに渡すためのSpringのModelオブジェクト
+     * @return "template/index" - テンプレート一覧表示用のHTMLテンプレートのパス
+     */
 	@RequestMapping(value = "/template/contract", method = RequestMethod.GET)
 	public String getContractTemplates(Model model) {
 		
@@ -59,7 +64,12 @@ public class TemplateController {
 		return "template/index";
 	}
 
-	//種別「契約後」のみを表示するメソッド
+	/**
+	 * 種別「契約後」のみを表示するメソッド
+	 * 
+	 * @param model テンプレート一覧をViewに渡すためのSpringのModelオブジェクト
+     * @return "template/index" - テンプレート一覧表示用のHTMLテンプレートのパス
+     */
 	@RequestMapping(value = "/template/afterContract", method = RequestMethod.GET)
 	public String getAfetrContractTemplates(Model model) {
 		
@@ -70,7 +80,12 @@ public class TemplateController {
 		return "template/index";
 	}
 
-	//種別「その他」のみを表示するメソッド
+	/**
+	 * 種別「その他」のみを表示するメソッド
+	 * 
+	 * @param model テンプレート一覧をViewに渡すためのSpringのModelオブジェクト
+     * @return "template/index" - テンプレート一覧表示用のHTMLテンプレートのパス
+     */
 	@RequestMapping(value = "/template/others", method = RequestMethod.GET)
 	public String getOthers(Model model) {
 		
