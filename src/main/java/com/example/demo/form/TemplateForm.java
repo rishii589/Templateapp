@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import com.example.demo.enums.TemplateType; 
 
 public class TemplateForm {
 	// テンプレートID
@@ -16,9 +17,7 @@ public class TemplateForm {
      * テンプレートの種別ID。
      */
 	@NotNull
-	@Min(value = 0)
-	@Max(value = 3)
-    private int typeId;
+    private TemplateType typeId;
 
     /**
      * テンプレート本体。
@@ -48,11 +47,11 @@ public class TemplateForm {
         this.id = id;
     }
 
-    public int getTypeId() {
+    public TemplateType getTypeId() {
         return typeId;
     }
 
-    public void setTypeId(int typeId) {
+    public void setTypeId(TemplateType typeId) {
         this.typeId = typeId;
     }
 
