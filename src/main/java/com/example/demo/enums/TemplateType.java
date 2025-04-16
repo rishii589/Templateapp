@@ -20,5 +20,14 @@ public enum TemplateType {
     public int getTypeId(){
         return typeId;
     }
+
+    public static TemplateType of(int typeId) {
+        for (TemplateType type : TemplateType.values()) {
+            if (type.getTypeId() == typeId) {
+                return type;
+            }
+        }
+        throw new IllegalArgumentException("No enum constant with typeId: " + typeId);
+    }
     
 }

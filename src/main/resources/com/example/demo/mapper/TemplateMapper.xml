@@ -13,7 +13,7 @@
 </resultMap>
 	
 	<!-- テンプレートの全件取得 -->
-    <select id="findAll" resultType="com.example.demo.entity.Template">
+    <select id="findAll" resultMap="TemplateResultMap">
         SELECT * FROM template WHERE deleteFlg = 0;
     </select>
 
