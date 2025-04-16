@@ -14,12 +14,12 @@ public class GlobalAdviceController {
      * @param model SpringのModelオブジェクト
      * @return エラーページのパス
      */
-	@ExceptionHandler(DataAccessException.class)
-	public String handleDatabaseError(DataAccessException ex, Model model) {
-	    model.addAttribute("errorMessage", "データベースアクセスエラーが発生しました。");
-	    return "template/systemError";
-	}
-	
+    @ExceptionHandler(DataAccessException.class)
+    public String handleDatabaseError(DataAccessException ex, Model model) {
+        model.addAttribute("errorMessage", "データベースアクセスエラーが発生しました。");
+        return "template/systemError";
+    }
+    
     /**
      * 不正な引数が検出された場合のハンドラーメソッドです。
      * @param ex 不正な引数例外

@@ -40,7 +40,6 @@ public class TemplateController {
      */
 	@RequestMapping(value = "/template/list", method = RequestMethod.GET)
 	public String getTemplateList(Model model) {
-		
 		//テンプレートの一覧を取得
 		List<Template> templateList = templateService.findAll();		
 		model.addAttribute("templateList", templateList);
@@ -104,11 +103,11 @@ public class TemplateController {
 	 */
 	@GetMapping(value = "/template/add")
 	public String newAddForm(Model model) {
-	    // テンプレートフォームを作成
-	    TemplateForm templateForm = new TemplateForm();
-	    
-	    model.addAttribute("templateForm", templateForm);
-	    return "template/edit";
+		// テンプレートフォームを作成
+		TemplateForm templateForm = new TemplateForm();
+		
+		model.addAttribute("templateForm", templateForm);
+		return "template/edit";
 	}
 	
 	/**
@@ -140,12 +139,12 @@ public class TemplateController {
 	@GetMapping(value = "/template/confirm")
 	public String showConfirmForm(@Validated TemplateForm templateForm, BindingResult bindingResult, Model model) {
 		
-		// バリデーションチェックでエラーがある場合は変更画面に戻る
-		if (bindingResult.hasErrors()) {
-			return "template/edit";
+	// バリデーションチェックでエラーがある場合は変更画面に戻る
+	if (bindingResult.hasErrors()) {
+		return "template/edit";
 		}
 		
-		model.addAttribute("templateForm", templateForm);
+	model.addAttribute("templateForm", templateForm);
 		return "template/confirm";
 	}
 	
