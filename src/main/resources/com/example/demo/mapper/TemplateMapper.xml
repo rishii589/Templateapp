@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.TemplateMapper">
+	
+	<!-- テンプレートの全件取得 -->
+    <select id="findAll" resultType="com.example.demo.entity.Template">
+        SELECT * FROM template WHERE deleteFlg = 0;
+    </select>
+
+    <select id="contract" resultType="com.example.demo.entity.Template">
+        SELECT * FROM template WHERE typeId = 1 AND deleteFlg = 0;
+    </select>
+
+    <select id="afterContract" resultType="com.example.demo.entity.Template">
+        SELECT * FROM template WHERE typeId = 2 AND deleteFlg = 0;
+    </select>
+
+    <select id="others" resultType="com.example.demo.entity.Template">
+        SELECT * FROM template WHERE typeId = 3 AND deleteFlg = 0;
+    </select>
+    
+    <!-- 新規テンプレートの登録 -->
+    <insert id="save">
+        INSERT INTO template
+            (typeId, template, createdAt, updatedAt)
+        VALUES
+            (#{typeId}, #{template}, CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);
+    </insert>
+    
+    <!-- テンプレートIDを指定してテンプレートを取得 -->
+    <select id="getTemplate" resultType="com.example.demo.entity.Template">
+        SELECT * FROM template WHERE id = #{id} AND deleteFlg = 0;
+    </select>
+	
+       <!-- テンプレートの削除 -->
+   <delete id ="delete">
+       UPDATE template SET deletedAt = CURRENT_TIMESTAMP, deleteFlg = 1 WHERE id = #{id}; 
+       
+   </delete>
+   
+      <!-- テンプレートの更新 -->
+   <update id="update" parameterType="com.example.demo.entity.Template">
+       UPDATE template SET  template = #{template}, typeId = #{typeId}, updatedAt = CURRENT_TIMESTAMP WHERE id = #{id} and updatedAt = #{updatedAt}; 
+   </update>
+    
+</mapper>
