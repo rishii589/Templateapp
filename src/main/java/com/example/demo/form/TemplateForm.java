@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import com.example.demo.enums.TemplateType; 
 
 public class TemplateForm {
 	// テンプレートID
@@ -16,14 +17,24 @@ public class TemplateForm {
      * テンプレートの種別ID。
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	@NotNull
+    private TemplateType typeId;
+=======
+>>>>>>> ログイン機能実装
     @NotNull
     @Min(value = 0)
     @Max(value = 3)
     private int typeId;
+<<<<<<< HEAD
 =======
 	@NotNull
     private TemplateType typeId;
 >>>>>>> parent of 3039d4f (Merge branch 'master' into ログイン機能実装)
+=======
+>>>>>>> master
+>>>>>>> ログイン機能実装
 
     /**
      * テンプレート本体。
@@ -53,11 +64,11 @@ public class TemplateForm {
         this.id = id;
     }
 
-    public int getTypeId() {
+    public TemplateType getTypeId() {
         return typeId;
     }
 
-    public void setTypeId(int typeId) {
+    public void setTypeId(TemplateType typeId) {
         this.typeId = typeId;
     }
 

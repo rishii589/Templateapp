@@ -1,6 +1,7 @@
 package com.example.demo.entity;
 
 import java.time.LocalDateTime;
+import com.example.demo.enums.TemplateType; 
 
 /**
  * テンプレートエンティティクラス
@@ -14,7 +15,7 @@ public class Template {
     /**
      * テンプレートの種別ID。
      */
-    private int typeId;
+    private TemplateType typeId;
 
     /**
      * テンプレート本体。
@@ -41,11 +42,11 @@ public class Template {
         this.id = id;
     }
 
-    public int getTypeId() {
+    public TemplateType getTypeId() {
         return typeId;
     }
 
-    public void setTypeId(int typeId) {
+    public void setTypeId(TemplateType typeId) {
         this.typeId = typeId;
     }
 
