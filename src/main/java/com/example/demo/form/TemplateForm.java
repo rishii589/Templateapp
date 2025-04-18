@@ -9,16 +9,21 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class TemplateForm {
-    // テンプレートID
-    private int id;
+	// テンプレートID
+	private int id;
 
     /**
      * テンプレートの種別ID。
      */
+<<<<<<< HEAD
     @NotNull
     @Min(value = 0)
     @Max(value = 3)
     private int typeId;
+=======
+	@NotNull
+    private TemplateType typeId;
+>>>>>>> parent of 3039d4f (Merge branch 'master' into ログイン機能実装)
 
     /**
      * テンプレート本体。
@@ -56,7 +61,7 @@ public class TemplateForm {
         this.typeId = typeId;
     }
 
-    public String getTemplate() {
+	public String getTemplate() {
         return template;
     }
 

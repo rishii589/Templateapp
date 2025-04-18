@@ -6,9 +6,9 @@ package com.example.demo.common;
  */
 public class Constants {
 
-    // インスタンスの生成禁止
-    private Constants (){}
-    
+	// インスタンスの生成禁止
+	private Constants (){}
+	
     public static final String REGISTER_COMPLETE = "The data was successfully saved.";
     public static final String EDIT_COMPLETE = "The data was successfully updated.";
     public static final String DELETE_COMPLETE = "The data was successfully deleted.";
