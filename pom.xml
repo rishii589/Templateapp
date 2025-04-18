@@ -55,17 +55,17 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
-  		<groupId>jakarta.validation</groupId>
-  		<artifactId>jakarta.validation-api</artifactId>
+  			<groupId>jakarta.validation</groupId>
+  			<artifactId>jakarta.validation-api</artifactId>
 		</dependency>
 		<dependency>
-  		<groupId>jakarta.inject</groupId>
-  		<artifactId>jakarta.inject-api</artifactId>
+  			<groupId>jakarta.inject</groupId>
+  			<artifactId>jakarta.inject-api</artifactId>
 		</dependency>
 		<dependency>
- 		 <groupId>jakarta.enterprise</groupId>
-  		<artifactId>jakarta.enterprise.cdi-api</artifactId>
-		<version>4.0.1</version>
+ 			<groupId>jakarta.enterprise</groupId>
+  			<artifactId>jakarta.enterprise.cdi-api</artifactId>
+			<version>4.0.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
